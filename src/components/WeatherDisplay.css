@@ -1,0 +1,130 @@
+/* General Reset */
+* {
+    box-sizing: border-box; /* Ensures padding and margin are included in width/height */
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body, #root {
+    height: 100%; /* Sets height for full coverage */
+    width: 100%;
+  }
+  
+  /* App Layout */
+  .App {
+    display: flex;
+    flex-direction: column; /* Stack header and content vertically */
+    min-height: 100vh; /* Full viewport height */
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* Light text for contrast */
+  }
+  
+  /* Header Styles */
+  header {
+    position: sticky;
+    top: 0; /* Ensures the header sticks at the top */
+    z-index: 1000; /* Ensures the header is above other elements */
+    flex-shrink: 0; /* Prevents header from shrinking */
+    background-color: #1a1c1e; /* Original header background */
+    padding: 20px; /* Spacing inside header */
+    text-align: center; /* Center align text in header */
+    color: #fff; /* Header text color */
+  }
+  
+  /* Main Content */
+  main {
+    flex: 1; /* Allows main to take the remaining space */
+    display: flex;
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+    padding: 20px; /* Adds some space around content */
+  }
+  
+  /* Weather Container */
+  .weather-container {
+    max-width: 800px; /* Set max width for the container */
+    width: 100%; /* Full width */
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background for card effect */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Depth with shadow */
+    padding: 20px; /* Internal padding */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  /* Hover Effect on Weather Container */
+  .weather-container:hover {
+    background: rgba(255, 255, 255, 0.2); /* Change background on hover */
+    transform: scale(1.02); /* Slightly increase size */
+  }
+  
+  /* Section Styles */
+  .weather-section {
+    margin-bottom: 20px; /* Spacing between sections */
+    padding: 20px; /* Padding for sections */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for definition */
+    border-radius: 10px; /* Rounded corners for sections */
+    background: rgba(255, 255, 255, 0.05); /* Slightly lighter background */
+  }
+  
+  /* Title Styles */
+  .weather-title {
+    font-size: 2em; /* Larger title */
+    margin-bottom: 10px; /* Spacing below title */
+    text-align: center; /* Center title */
+  }
+  
+  /* Temperature Styles */
+  .temperature {
+    font-size: 4em; /* Larger temperature display */
+    color: #ffcc00; /* Highlight color for temperature */
+    text-align: center; /* Center align temperature */
+  }
+  
+  /* Hourly Weather Styles */
+  .hourly-weather {
+    display: flex; /* Use flexbox for horizontal layout */
+    justify-content: space-around; /* Space between items */
+  }
+  
+  .hour {
+    text-align: center; /* Center align text in hourly weather */
+    flex: 1; /* Allow equal width */
+    padding: 10px; /* Padding for hourly blocks */
+    border-radius: 8px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.1); /* Background for hourly blocks */
+    transition: background 0.3s ease; /* Smooth background change */
+  }
+  
+  /* Hover Effect for Hourly Weather */
+  .hour:hover {
+    background: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  }
+  
+  /* Five Day Forecast Styles */
+  .five-day-forecast {
+    width: 100%; /* Full width */
+    background: rgba(255, 255, 255, 0.1); /* Light background */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  .table thead th {
+    background-color: rgba(255, 255, 255, 0.3); /* Header background */
+    color: #ffffff; /* Header text color */
+    text-align: center; /* Center header text */
+  }
+  
+  .table tbody tr {
+    background-color: rgba(255, 255, 255, 0.05); /* Row background */
+  }
+
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .hourly-weather {
+      flex-direction: column; /* Stack hourly weather vertically on small screens */
+    }
+  
+    .hour {
+      margin-bottom: 10px; /* Spacing between hours */
+    }
+  }
+  

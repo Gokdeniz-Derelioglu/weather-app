@@ -1,0 +1,16 @@
+/* Temperature color classes */
+.cold {
+    color: #1E90FF; /* Blue for cold temperatures */
+  }
+  
+  .warm {
+    color: #FFA500; /* Orange for warm temperatures */
+  }
+  
+  .hot {
+    color: #FF4500; /* Red for hot temperatures */
+  }
+  
+  .default {
+    color: #000000; /* Default black color */
+  }
